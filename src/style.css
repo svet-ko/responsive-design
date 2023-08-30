@@ -284,8 +284,12 @@ html, body {
   object-fit: cover;
 }
 
-.arrow {
+.arrow_size--big {
   width: 35px;
+}
+
+.arrow_size--small {
+  width: 24px;
 }
 
 .loop {
@@ -293,11 +297,15 @@ html, body {
   width: 70%;
 }
 
-.loop__item {
+.loop__item--big {
   min-width: 200px;
   min-height: 400px;
   margin: 15px auto 45px;
   padding: 17vh 16% 18vh 12%;
+}
+
+.loop__item--big:last-of-type {
+  margin-bottom: 0;
 }
 
 .loop__item::before {
@@ -347,9 +355,12 @@ html, body {
   color: #333350;
 }
 
+.card__header--big {
+  font-size: 45px;
+}
+
 .card__header--arrow {
   z-index: 3;
-  font-size: 45px;
   width: 100%;
   margin: 0 0 30px;
   position: relative;
@@ -369,6 +380,10 @@ html, body {
   fill: #f7f7f7;
 }
 
+.card__header--arrow:hover .card__arrow_color--dark {
+  fill: #333350;
+}
+
 .loop__paragraf {
   margin: 30px 0;
   padding: 0 20px;
@@ -381,11 +396,73 @@ html, body {
   text-transform: uppercase;
 }
 
-/*.loop__grid {
+.loop__grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-areas: 
   "first-card first-card first-card second-card second-card second-card"
   "third-card third-card fourth-card fourth-card fifth-card fifth-card";
-  gap: 16px;
-}*/
+  gap: 20px;
+}
+
+.loop__grid .loop__item {
+  padding: 70px 4% 80px 3.5%;
+}
+
+.loop__grid .loop__item:nth-child(1) {
+  grid-area: first-card;
+}
+
+.loop__grid .loop__item:nth-child(1)::before {
+  background-color: lightpink;
+}
+
+.loop__grid .loop__item:nth-child(2) {
+  grid-area: second-card;
+}
+
+.loop__grid .loop__item:nth-child(2)::before {
+  background-color: blue;
+}
+
+.loop__grid .loop__item:nth-child(3) {
+  grid-area: third-card;
+}
+
+.loop__grid .loop__item:nth-child(3)::before {
+  background-color: orange;
+}
+
+.loop__grid .loop__item:nth-child(4) {
+  grid-area: fourth-card;
+}
+
+.loop__grid .loop__item:nth-child(4)::before {
+  background-color: purple;
+}
+
+.loop__grid .loop__item:nth-child(5) {
+  grid-area: fifth-card;
+}
+
+.loop__grid .loop__item:nth-child(5)::before {
+  background-color: pink;
+}
+
+.card__header--grid {
+  font-size: 30px;
+}
+
+.card_color--dark {
+  color:#333350;
+}
+
+.card__tag_color--dark {
+  border-color: #333350;
+  color:#333350;
+}
+
+.card__tag_color--dark:hover {
+  background-color: #333350;
+  color:#ebebeb;
+}
