@@ -1,0 +1,103 @@
+@use './fonts';
+
+.loop {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  position: relative;
+
+  &__item {
+    &::before {
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      opacity: 0.8;
+    }
+
+    &--big {
+      min-width: 200px;
+      min-height: 400px;
+      margin: .8em auto 2em;
+      padding: 7vh 16% 9vh 12%;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      &:nth-child(2) {
+        &::before {
+          background-color: orange;
+        }
+      }
+    }
+  }
+
+  &__paragraf {
+    margin: 3em 0;
+    padding: 0 2em;
+    text-align: center;
+    font-size: fonts.$font-size-paragraf;
+    font-weight: fonts.$font-regular;
+    display: block;
+    width: 100%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: 
+    "first-card first-card first-card second-card second-card second-card"
+    "third-card third-card fourth-card fourth-card fifth-card fifth-card";
+    gap: 20px;
+
+    .loop__item {
+      padding: 3em 4% 4em 3.5%;
+
+      &:nth-child(1) {
+        grid-area: first-card;
+
+        &::before {
+          background-color: lightpink;
+        }
+      } 
+      
+      &:nth-child(2) {
+        grid-area: second-card;
+
+        &::before {
+          background-color: blue;
+        }
+      }
+
+      &:nth-child(3) {
+        grid-area: third-card;
+
+        &::before {
+          background-color: orange;
+        }
+      }
+
+      &:nth-child(4) {
+        grid-area: fourth-card;
+
+        &::before {
+          background-color: purple;
+        }
+      }
+
+      &:nth-child(5) {
+        grid-area: fifth-card;
+  
+        &::before {
+          background-color: pink;
+        }
+      }
+    }    
+  }
+}

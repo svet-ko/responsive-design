@@ -1,0 +1,49 @@
+@use './colors';
+
+.nav {
+  display: flex;
+  flex-direction: row;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: .5em;
+  }
+
+  &__item:not(:last-child) {
+    margin: 0.5em;
+  }
+
+  &__link {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 1px;
+      right: -6px;
+      width: 6px;
+      height: 6px;
+      content: '';
+      transition-timing-function: ease;
+      transition-duration: .3s;
+      transition-property: background-color,opacity;
+      border-radius: 7px;
+      background-color: transparent;
+    }
+
+    &:hover::before {
+      background-color: colors.$link-label-color-hover;
+    }
+
+    &:active::before {
+      background-color: colors.$link-label-color-active;
+    }
+
+    &--active {
+      &::before {
+        background-color: colors.$link-label-color-active;
+      }
+    }
+  }
+}

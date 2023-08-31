@@ -1,0 +1,83 @@
+.pinned {
+  width: 85%;
+  position: relative;
+
+  &__list {
+    width: 100%;
+    margin: 0 auto 25px;
+    min-height: 200px;
+    padding-right: 5px;
+    padding-left: 5px;
+    display: grid;
+    grid-template-columns: 40% 28.2% 28.2%;
+    grid-template-areas: 
+    "first-card second-card third-card"
+    "first-card fourth-card fifth-card";
+    gap: 16px;
+  }
+
+  &__item {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    transition: transform .2s ease;
+    background-image: url(./img/pinned_2.jpg);
+    background-position: center;
+
+    &:hover {
+      transform: translateY(-8px);
+    }
+
+    &::before {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      opacity: 0.8;
+    }
+
+    &:nth-child(1) {
+      grid-area: first-card;
+      background-image: url(./img/pinned_1_.jpg);
+
+      &::before {
+        opacity: 0;
+      }
+    }
+
+    &:nth-child(2) {
+      grid-area: second-card;
+
+      &::before {
+        background-color: blue;
+      }
+    }
+
+    &:nth-child(3) {
+      grid-area: third-card;
+
+      &::before {
+        background-color: orange;
+      }
+    }
+
+    &:nth-child(4) {
+      grid-area: fourth-card;
+
+      &::before {
+        background-color: purple;
+      }
+    }
+
+    &:nth-child(5) {
+      grid-area: fifth-card;
+
+      &::before {
+        background-color: pink;
+      }
+    }   
+  }  
+}
