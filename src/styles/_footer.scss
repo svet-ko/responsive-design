@@ -1,0 +1,14 @@
+.footer {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+
+  &__copyright {
+    max-width: 90%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+}

@@ -7,6 +7,7 @@ $form-button-width: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 2em;
 
   &__header {
     font-size: fonts.$font-size-header;
@@ -30,10 +31,11 @@ $form-button-width: 20px;
     font-size: fonts.$font-size-paragraf;
     margin: 1em 0;
     padding: 1em 1em;
-    transition: padding .5s ease .2s;
+    transition: padding-left .5s ease .2s, padding-right .5s ease .2s;
 
     &:focus {
-      padding: 1em 7em;
+      padding-left: 7em;
+      padding-right: 7em;
     }
   }
 
