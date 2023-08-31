@@ -1,0 +1,27 @@
+@use './colors';
+@use './fonts';
+
+.button {
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+.button--styled {
+  background-color: colors.$button;
+  color: colors.$primary-light;
+  text-align: center;
+  border-radius: 16px;
+
+  font-size: fonts.$font-size-button;
+  font-weight: fonts.$font-regular;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+  box-sizing: border-box;
+  height: auto;
+  margin: 5px 0 0 0;
+  padding: 1.5em 1.5em 1.5em;
+}

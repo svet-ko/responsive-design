@@ -1,0 +1,13 @@
+@use './colors';
+
+@mixin button-animation($button-width) {
+  transition-timing-function: ease-in-out;
+  transition-duration: .4s;
+  transition-property: background-color,color,width;  
+
+  &:hover {
+    background-color: colors.$button-hover;
+    color: colors.$primary-dark;
+    width: calc($button-width + 1%);
+  }
+}

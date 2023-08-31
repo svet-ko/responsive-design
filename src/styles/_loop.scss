@@ -1,10 +1,14 @@
 @use './fonts';
+@use './mixin.scss';
+
+$loop-button-width: 60%;
 
 .loop {
   display: flex;
   flex-direction: column;
   width: 70%;
   position: relative;
+  align-items: center;
 
   &__item {
     &::before {
@@ -50,6 +54,7 @@
 
   &__grid {
     display: grid;
+    margin-bottom: 1em;
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas: 
     "first-card first-card first-card second-card second-card second-card"
@@ -99,5 +104,11 @@
         }
       }
     }    
+  }
+
+  &__button {
+    width: 60%;
+    margin-bottom: 2em;
+    @include mixin.button-animation($loop-button-width);
   }
 }
