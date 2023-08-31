@@ -1,7 +1,4 @@
 @use './fonts';
-@use './mixin.scss';
-
-$loop-button-width: 60%;
 
 .loop {
   display: flex;
@@ -109,6 +106,5 @@ $loop-button-width: 60%;
   &__button {
     width: 60%;
     margin-bottom: 2em;
-    @include mixin.button-animation($loop-button-width);
   }
 }
