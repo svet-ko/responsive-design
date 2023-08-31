@@ -80,6 +80,9 @@ html, body {
   justify-content: space-between;
   align-items: center;
 }
+.header__burger {
+  display: none;
+}
 
 .nav {
   display: flex;
@@ -490,6 +493,47 @@ html, body {
 @keyframes printed_text {
   from {
     width: 0;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .header__burger {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    padding: 7px 0;
+    background: none;
+    color: inherit;
+    outline: none;
+    border: none;
+    border-top: 3px solid #ebebeb;
+    border-bottom: 3px solid #ebebeb;
+    font: inherit;
+    cursor: pointer;
+  }
+  .nav {
+    position: absolute;
+    top: 2em;
+    right: 3.4em;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: #292424;
+    padding: 1em;
+    width: 10em;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    z-index: 2;
+    border-radius: 16px;
+  }
+  .nav__list {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-bottom: 1em;
+  }
+  .nav.active {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
