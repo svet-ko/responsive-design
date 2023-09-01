@@ -77,6 +77,8 @@
     line-height: fonts.$line-height-small;
     display: inline-block;
     margin: 0 1em 2px 0;
+    width: 100%;
+    word-wrap:break-word;
 
     &--pinned {
       font-size: fonts.$font-size-header;

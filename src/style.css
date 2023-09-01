@@ -257,6 +257,8 @@ html, body {
   line-height: 1;
   display: inline-block;
   margin: 0 1em 2px 0;
+  width: 100%;
+  word-wrap: break-word;
 }
 .card__header--pinned {
   font-size: 30px;
