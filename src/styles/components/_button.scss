@@ -1,6 +1,6 @@
-@use './colors';
-@use './fonts';
-@use './mixin';
+@use '../variables/colors';
+@use '../variables/fonts';
+@use '../mixins/mixin';
 
 .button {
   text-decoration: none;

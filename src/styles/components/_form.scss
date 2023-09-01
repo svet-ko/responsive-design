@@ -1,7 +1,7 @@
-@use './mixin.scss';
-@use './fonts';
-@use './colors';
-$form-button-width: 20px;
+@use '../mixins/mixin';
+@use '../variables/fonts';
+@use '../variables/colors';
+@use '../variables/sizes';
 
 .form {
   display: flex;

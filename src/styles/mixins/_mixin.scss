@@ -1,4 +1,4 @@
-@use './colors';
+@use '../variables/colors';
 
 @mixin button-animation() {
   transition-timing-function: ease-in-out;
